@@ -1,4 +1,4 @@
-﻿namespace TheOtherRoles.Modules.CustomHats.Extensions;
+﻿namespace CustomCosmeticsAU.Modules.CustomHats.Extensions;
 
 internal static class HatDataExtensions
 {

@@ -2,12 +2,11 @@
 using System.IO;
 using System.Text.Json;
 using BepInEx.Unity.IL2CPP.Utils;
-using TheOtherRoles.Utilities;
 using UnityEngine;
 using UnityEngine.Networking;
-using static TheOtherRoles.Modules.CustomHats.CustomHatManager;
+using static CustomCosmeticsAU.Modules.CustomHats.CustomHatManager;
 
-namespace TheOtherRoles.Modules.CustomHats;
+namespace CustomCosmeticsAU.Modules.CustomHats;
 
 public class HatsLoader : MonoBehaviour
 {
@@ -52,9 +51,8 @@ public class HatsLoader : MonoBehaviour
 
         UnregisteredHats.AddRange(SanitizeHats(response));
         var toDownload = GenerateDownloadList(UnregisteredHats);
-        if (EventUtility.isEnabled) UnregisteredHats.AddRange(CustomHatManager.loadHorseHats());
 
-        TheOtherRolesPlugin.Logger.LogMessage($"I'll download {toDownload.Count} hat files");
+        TheOtherRolesPlugin.Logger.LogMessage($"Downloading {toDownload.Count} hat files");
 
         foreach (var fileName in toDownload)
         {
@@ -69,7 +67,7 @@ public class HatsLoader : MonoBehaviour
         var www = new UnityWebRequest();
         www.SetMethod(UnityWebRequest.UnityWebRequestMethod.Get);
         fileName = fileName.Replace(" ", "%20");
-        TheOtherRolesPlugin.Logger.LogMessage($"downloading hat: {fileName}");
+        TheOtherRolesPlugin.Logger.LogMessage($"Downloading hat: {fileName}");
         www.SetUrl($"{RepositoryUrl}/hats/{fileName}");
         www.downloadHandler = new DownloadHandlerBuffer();
         var operation = www.SendWebRequest();

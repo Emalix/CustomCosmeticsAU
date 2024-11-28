@@ -1,13 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using CustomCosmeticsAU.Modules.CustomHats.Extensions;
 using HarmonyLib;
 using PowerTools;
-using TheOtherRoles;
-using TheOtherRoles.Modules.CustomHats.Extensions;
 using UnityEngine;
 
-namespace TheOtherRoles.Modules.CustomHats.Patches;
+namespace CustomCosmeticsAU.Modules.CustomHats.Patches;
 
 [HarmonyPatch(typeof(HatParent))]
 internal static class HatParentPatches
@@ -46,7 +45,7 @@ internal static class HatParentPatches
     private static bool UpdateMaterialPrefix(HatParent __instance)
     {
         if (!__instance.TryGetCached(out var asset)) return true;
-        var extend = HatDataExtensions.GetHatExtension(__instance.Hat);
+        var extend = __instance.Hat.GetHatExtension();
         if (asset && extend != null && extend.Adaptive)
         {
             __instance.FrontLayer.sharedMaterial = DestroyableSingleton<HatManager>.Instance.PlayerMaterial;

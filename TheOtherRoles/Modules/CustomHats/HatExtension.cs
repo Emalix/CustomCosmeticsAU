@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TheOtherRoles.Modules.CustomHats;
+namespace CustomCosmeticsAU.Modules.CustomHats;
 
 public class HatExtension
 {

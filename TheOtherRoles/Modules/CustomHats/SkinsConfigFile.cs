@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace TheOtherRoles.Modules.CustomHats;
+namespace CustomCosmeticsAU.Modules.CustomHats;
 
 public class SkinsConfigFile
 {

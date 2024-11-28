@@ -1,7 +1,6 @@
 ﻿using HarmonyLib;
-using TheOtherRoles;
 
-namespace TheOtherRoles.Modules.CustomHats.Patches;
+namespace CustomCosmeticsAU.Modules.CustomHats.Patches;
 
 [HarmonyPatch(typeof(CosmeticsCache))]
 internal static class CosmeticsCachePatches
@@ -10,7 +9,7 @@ internal static class CosmeticsCachePatches
     [HarmonyPrefix]
     private static bool GetHatPrefix(string id, ref HatViewData __result)
     {
-        TheOtherRolesPlugin.Logger.LogMessage($"trying to load hat {id} from cosmetics cache");
+        TheOtherRolesPlugin.Logger.LogMessage($"Trying to load hat {id} from cosmetics cache");
         return !CustomHatManager.ViewDataCache.TryGetValue(id, out __result);
     }
 }

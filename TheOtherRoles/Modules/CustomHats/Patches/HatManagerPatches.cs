@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Cpp2IL.Core.Extensions;
 using HarmonyLib;
-using TheOtherRoles;
 
-namespace TheOtherRoles.Modules.CustomHats.Patches;
+namespace CustomCosmeticsAU.Modules.CustomHats.Patches;
 
 [HarmonyPatch(typeof(HatManager))]
 internal static class HatManagerPatches
@@ -13,7 +11,7 @@ internal static class HatManagerPatches
     private static bool isRunning;
     private static bool isLoaded;
     private static List<HatData> allHats;
-        
+
     [HarmonyPatch(nameof(HatManager.GetHatById))]
     [HarmonyPrefix]
     private static void GetHatByIdPrefix(HatManager __instance)
@@ -41,7 +39,7 @@ internal static class HatManagerPatches
 
         __instance.allHats = allHats.ToArray();
     }
-        
+
     [HarmonyPatch(nameof(HatManager.GetHatById))]
     [HarmonyPostfix]
     private static void GetHatByIdPostfix()

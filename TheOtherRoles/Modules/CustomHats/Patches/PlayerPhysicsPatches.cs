@@ -1,7 +1,7 @@
-﻿using TheOtherRoles.Modules.CustomHats.Extensions;
-using HarmonyLib;
+﻿using HarmonyLib;
+using CustomCosmeticsAU.Modules.CustomHats.Extensions;
 
-namespace TheOtherRoles.Modules.CustomHats.Patches;
+namespace CustomCosmeticsAU.Modules.CustomHats.Patches;
 
 [HarmonyPatch(typeof(PlayerPhysics))]
 internal static class PlayerPhysicsPatches
