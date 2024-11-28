@@ -1,0 +1,17 @@
+{
+    "hats": [
+	 {
+            "adaptive": true,
+            "author": "Lanelore",
+            "backresource": "Axolotl_back.png",
+            "climbresource": "Axolotl_climb.png",
+            "condition": "None",
+            "name": "Axolotl",
+            "package": "Community Hats",
+            "reshasha": "5153573c20690c2dc86507960e6150a1",
+            "reshashb": "654cf3a5fe4e71e1a67f4cba4157c94a",
+            "reshashc": "f12fa897501ec7319c149cf5e2b33673",
+            "resource": "Axolotl_adaptive.png"
+        },
+    ]
+}
