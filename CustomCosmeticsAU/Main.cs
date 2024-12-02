@@ -15,7 +15,7 @@ namespace CustomCosmeticsAU
     [BepInProcess("Among Us.exe")]
     [ReactorModFlags(Reactor.Networking.ModFlags.RequireOnAllClients)]
 
-    public class TheOtherRolesPlugin : BasePlugin
+    public class CustomCosmeticsAUPlugin : BasePlugin
     {
         public const string Id = "me.emalix.customcosmeticsau";
         public const string VersionString = "1.0.0";
@@ -24,7 +24,7 @@ namespace CustomCosmeticsAU
         internal static BepInEx.Logging.ManualLogSource Logger;
 
         public Harmony Harmony { get; } = new Harmony(Id);
-        public static TheOtherRolesPlugin Instance;
+        public static CustomCosmeticsAUPlugin Instance;
 
         public static Sprite ModStamp;
 

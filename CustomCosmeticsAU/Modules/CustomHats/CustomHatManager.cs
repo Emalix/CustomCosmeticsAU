@@ -38,7 +38,7 @@ public static class CustomHatManager
 
     static CustomHatManager()
     {
-        Loader = TheOtherRolesPlugin.Instance.AddComponent<HatsLoader>();
+        Loader = CustomCosmeticsAUPlugin.Instance.AddComponent<HatsLoader>();
     }
 
     internal static void LoadHats()

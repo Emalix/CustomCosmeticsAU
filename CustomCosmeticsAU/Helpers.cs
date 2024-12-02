@@ -69,7 +69,7 @@ namespace CustomCosmeticsAU
             }
             catch
             {
-                TheOtherRolesPlugin.Logger.LogError("Error loading texture from disk: " + path);
+                CustomCosmeticsAUPlugin.Logger.LogError("Error loading texture from disk: " + path);
             }
             return null;
         }
